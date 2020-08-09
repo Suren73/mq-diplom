@@ -119,6 +119,59 @@ body {
 
 .header-logo {
   width: 180px;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.menu__button {
+  display: none;
+  width: 1.4em;
+  height: 1em;  
+  border: none;
+  padding: 0;
+
+  background-color: transparent;
+  font-size: 25px;
+  position: relative;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.menu__button:before, .menu__button:after {
+  content:"";
+  width: 100%;
+  height: 20%;
+
+  border-radius: 5px;
+  background-color: #ffffff;
+
+  position: absolute;
+  left: 0;
+}
+
+.menu__button:before {
+  top: 0;
+}
+
+.menu__button:after {
+  bottom: 0;
+}
+
+.menu__button-label {
+  width: 100%;
+  height: 20%;
+  margin-top: -0.1em;  
+
+  border-radius: 5px;
+  background-color: #ffffff;  
+
+  position: absolute;
+  left: 0;
+  top: 50%;
 }
 
 .menu-list {
@@ -163,6 +216,7 @@ body {
 
 .trends {
   margin-top: 59px;
+  max-width: 100%;
 }
 
 .trends-lists {
