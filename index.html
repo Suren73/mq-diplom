@@ -7,13 +7,52 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="popup _hidden">
+    <div class="popup-container">
+      <div class="popup-content">
+        <h2 class="sidebar-title">Ваш фидбек</h2>
+        <form class="popup-form" method="get">
+          <div class="popup-column">
+            <label class="popup-group">
+            <span class="popup-hint">Как часто вы заходите на сайт?</span>
+              <select class="select" name="volume">
+                <option selected value="almosteveryday">Почти каждый день</option>
+                <option value="everyday">Каждый день</option>
+              </select>
+            </label>
+          </div>
+          <div class="popup-column">
+              <span class="popup-hint">Вы подписаны на e-mail рассылку?</span>
+            <label class="popup-group group-radio">
+              <input checked class="radio" type="radio" name="radio-group">
+              <span class="radio-group-text">Да</span>
+            </label>
+            <label class="popup-group group-radio">
+              <input class="radio" type="radio" name="radio-group">
+              <span class="radio-group-text">Нет</span>
+            </label>
+          </div>
+          <div class="popup-column">
+            <label class="popup-group">
+              <span class="popup-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+              <textarea class="textarea" placeholder="Может, больше рецептов?"></textarea>
+            </label>
+          </div>
+          <div class="popup-column">
+            <button type="submit" class="popup-button"><span class="popup-button-text">Отправить</span></button>
+          </div>
+        </form>
+      </div>
+     <button class="popup-close" type="button"><span class="popup-close-button-text">Закрыть окно</span></button>
+    </div>
+  </div>
   <header class="header">
     <div class="container container-header">
       <div class="header-panel">
         <img src="svg/noemi-logo.svg" class="header-logo" alt="logo noemi">
         <nav class="menu">
-          <button class="menu__button js-menu__button">
-            <span class="menu__button-label">открыть меню</span>
+          <button class="menu-button js-menu-button">
+            <span class="menu-button-label">открыть меню</span>
           </button>
           <ul class="menu-list">
             <li class="menu-list-item">
@@ -41,7 +80,7 @@
     </div>
   </header>
   <section class="trends">
-    <h2 class="sidebar-title">Сейчас в тренде</h2>
+    <h2 class="title trends-title">Сейчас в тренде</h2>
     <div class="trends-lists">
       <article class="trend-list-item">
         <img class="trend-list-img" src="images/trend1.jpg" alt="img">
@@ -239,7 +278,7 @@
 
     <aside class="sidebar">
       <section class="recent-posts">
-        <h4 class="sidebar-title">Новые посты</h4>
+        <h4 class="title sidebar-title">Новые посты</h4>
 
         <article class="recent-post-item">
           <img class="recent-post-img" src="images/2.jpg" alt="img">
@@ -296,7 +335,7 @@
       </section>
 
       <section class="subscribe">
-        <h4 class="sidebar-title">Рассылка</h4>
+        <h4 class="title sidebar-title">Рассылка</h4>
         <form method="get" class="form-subscribe">
           <label class="form-group">
             <span class="form-hint">Please enter your email</span>
@@ -307,7 +346,7 @@
       </section>
 
       <section class="tags">
-        <h4 class="sidebar-title">Теги</h4>
+        <h4 class="title sidebar-title">Теги</h4>
         <ul class="tags-list">
           <li class="tags-list-item">
             <a href="#0" class="tags-list-link">Fashion</a>
@@ -337,7 +376,7 @@
       </section>
 
       <section class="categories">
-        <h4 class="sidebar-title">Темы</h4>
+        <h4 class="title sidebar-title">Темы</h4>
         <ul class="categories-list">
           <li class="categories-list-item">
             <a href="#0" class="categories-list-link">Красота</a>
@@ -368,7 +407,7 @@
     </aside>
   </main>
   <section class="container container-shop">
-    <h2 class="sidebar-title">Наши изделия</h2>
+    <h2 class="title shop-title">Наши изделия</h2>
     <div class="products">
       <article class="product">
         <div class="product-imgbox">
