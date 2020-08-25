@@ -267,7 +267,7 @@ body {
 
   background-image: url(../images/banner-bg.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-color: #000000;
 }
@@ -285,7 +285,7 @@ body {
 }
 
 .container {
-  max-width: 330px;
+  /*max-width: 330px;*/
 
   padding-left: 15px;
   padding-right: 15px;
@@ -390,7 +390,7 @@ body {
 .header-lead {
   margin-top: 0;
   margin-bottom: 0;
-  width: 280px;
+  max-width: 280px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 218px;
@@ -435,7 +435,8 @@ body {
   width: 66px;
   height: 3px;
 
-  background-color: #b59f5b;
+  background-color: rgb(181, 159, 91);
+  opacity: 0.4;
 
   content: "";
 }
@@ -449,11 +450,46 @@ body {
 }
 
 .trend-list-item {
+  display: flex;
+  align-items: flex-end;
+
   box-sizing: border-box;
   width: 100%;
+  height: 319px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
 
+  background-image: url(../images/trend1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
   position: relative;
+
 }
+
+.trend-list-item:nth-child(2) {
+  background-image: url(../images/trend2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.trend-list-item:nth-child(3) {
+  background-image: url(../images/trend3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.trend-list-item:nth-child(4) {
+  background-image: url(../images/trend4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 
 .trend-list-item:nth-child(n+2) {
   margin-top: 3px;
@@ -470,25 +506,18 @@ body {
   background-color: #000000;
   opacity: 0.6;
 
-  z-index: 1;
-}
-
-.trend-list-img {
-  width: 100%;
 }
 
 .trend-list-content{
   border: 3px solid #b59f5b;
-  position: absolute;
-  
-  left: 15px;
-  right: 15px;
-  bottom: 13px;
 
+  width: 100%;
   padding: 19px 29px;
   box-sizing: border-box;
+  flex-grow: 1;
 
-  z-index: 2;
+  position: relative;
+  z-index: 1;
 }
 
 .content-trend-title {
@@ -599,6 +628,10 @@ body {
 
 /* aside */
 
+.sidebar {
+  width: 100%;
+}
+
 /* recent posts */
 
 .recent-posts {
@@ -625,8 +658,9 @@ body {
 }
 
 .recent-list-content {
-  width: 185px;
+  width: 242px;
   box-sizing: border-box;
+  margin-left: 17px;
 }
 
 .recent-post-item-title {
@@ -763,19 +797,22 @@ body {
   margin-bottom: 0;
   box-sizing: border-box; /* !!! */
   width: 270px;
-
-  /*list-style: none;*/
 }
 
 .tags-list-item {
+  display: flex;
+
   box-sizing: border-box;
   margin-bottom: 5px;
   margin-right: 5px;
-  padding: 0 12px;
+  padding: 4px 12px;
   border: 3px solid #f4f3f1;
+
+  align-items: center;
 }
 
 .tags-list-link {
+
   font-size: 12px;
   font-weight: 700;
 
@@ -795,8 +832,8 @@ body {
 }
 
 .categories-list-item {
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   border-bottom: 1px solid #eeeeee;
 }
@@ -814,6 +851,7 @@ body {
   display: inline-block;
   vertical-align: bottom;
   
+  font-size: 12px;
   font-weight: 700;
   margin-left: 9px;
   padding-bottom: 4px;
@@ -1048,6 +1086,14 @@ body {
   .trend-list-item:nth-child(n+2) {
     margin-top: 0;
   }
+
+  .sidebar {
+    width: 270px;
+  }
+
+  .recent-list-content {
+    width: 185px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1065,7 +1111,7 @@ body {
   }
 
   .header-lead {
-    width: 690px;
+    max-width: 690px;
     padding-bottom: 145px;
 
     font-size: 45px;
@@ -1086,11 +1132,6 @@ body {
   }
 
   .trend-list-content{
-  
-    left: 20px;
-    right: 20px;
-    bottom: 15px;
-
     padding: 35px 30px;
   }
 
@@ -1099,6 +1140,8 @@ body {
     justify-content: space-between;
 
     box-sizing: border-box;
+
+    /*max-width: 390px;*/
   }
 
   .post-list-item:nth-child(n + 2) {
@@ -1108,12 +1151,12 @@ body {
   .post-list-img {
     display: block;
   
-    width: 381px;
+    max-width: 381px;
     height: 294px;
   }
 
   .post-list-content {
-    width: 370px;
+    max-width: 370px;
     margin-left: 30px;
     margin-top: 0;
   }
@@ -1142,9 +1185,9 @@ body {
     padding-bottom: 88px;
   }
 
-  .container {
-    max-width: 698px;
-  }
+ /* .container {
+    width: 698px;
+  }*/
 
   .trends-lists {
     flex-wrap: wrap;
@@ -1152,7 +1195,7 @@ body {
   }
 
   .trend-list-item {
-    width: calc((100% / 2) - (3*2px));
+    width: calc((100% / 2) - 2px);
   }
 
   .trend-list-item:nth-child(n+3) {
@@ -1160,11 +1203,6 @@ body {
   }
 
   .trend-list-content{
-  
-    left: 19px;
-    right: 19px;
-    bottom: 14px;
-
     padding: 32px 29px;
   }
 
@@ -1186,7 +1224,7 @@ body {
   }
 
   .header-lead {
-    width: 615px;
+    max-width: 615px;
     padding-bottom: 124px;
 
     font-size: 40px;
@@ -1201,12 +1239,12 @@ body {
   }
 
   .post-list-img {
-    width: 393px;
+    max-width: 393px;
     height: 302px;
   }
 
   .post-list-content {
-    width: 393px;
+    max-width: 393px;
     margin-top: 16px;
   }
 
@@ -1222,6 +1260,10 @@ body {
 
   .trends-title, .shop-title {
     font-size: 18px;
+  }
+
+  .sidebar {
+    margin-left: 35px;
   }
 
   .product-title {
@@ -1272,10 +1314,6 @@ body {
     margin-bottom: 44px;
   }
 
-  .recent-list-content {
-    width: 240px;
-  }
-
   .subscribe {
     margin-bottom: 43px;
   }
@@ -1317,7 +1355,11 @@ body {
   }
 
   .trend-list-item {
-    width: calc((100% / 2) - (3*2px));
+    width: calc((100% / 2) - 2px);
+  }
+
+  .trend-list-item:nth-child(n+2) {
+    margin-top: 0;
   }
 
   .trend-list-item:nth-child(n+3) {
@@ -1325,14 +1367,11 @@ body {
   }
 
   .trend-list-content{
-
-    left: 19px;
-    right: 19px;
-    bottom: 14px;
-
+    /*width: 100%;*/
     padding: 32px 29px;
   }
 }
+
 @media (orientation: landscape) and (min-width: 641px) and (max-width: 1199px) {
   .trends-lists {
     display: flex;
@@ -1340,17 +1379,22 @@ body {
   }
 
   .trend-list-content{
-  
-    left: 20px;
-    right: 20px;
-    bottom: 15px;
-
     padding: 35px 30px;
+ /*   width: 100%;*/
   }
+
   .trend-list-item {
     width: calc((100% / 4) - (3*2px));
   }
+
+   .trend-list-item:nth-child(n+3) {
+    margin-top: 0;
+  }
 }
+
+
+
+
 
 
 
