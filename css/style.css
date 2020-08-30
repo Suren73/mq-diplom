@@ -1374,16 +1374,16 @@ body {
   }
 }
 
-@media (orientation: landscape) and (min-width: 641px) and (max-width: 1199px) {
+/*@media (orientation: landscape) and (min-width: 641px) and (max-width: 1199px) {
   .trends-lists {
     display: flex;
     justify-content: space-between;
   }
 
   .trend-list-content{
-    padding: 35px 30px;
+    padding: 35px 30px;*/
  /*   width: 100%;*/
-  }
+ /* }
 
   .trend-list-item {
     width: calc((100% / 4) - (3*2px));
@@ -1393,7 +1393,7 @@ body {
     margin-top: 0;
   }
 }
-
+*/
 
 
 
